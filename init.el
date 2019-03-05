@@ -123,8 +123,8 @@
 
   ;; Leader keybindings
   (general-define-key :prefix leet-leader-key
-                      "," #'(switch-to-buffer :which-key "Switch Buffer")
-                      "." #'(find-file :which-key "Find File"))
+                      "," #'(counsel-switch-buffer :which-key "Switch Buffer")
+                      "." #'(counsel-find-file :which-key "Find File"))
 
   ;; Applications Keybindings
   (general-define-key :prefix (concat leet-leader-key " a")
@@ -133,7 +133,7 @@
   ;; Buffer Keybindings
   (general-define-key :prefix (concat leet-leader-key " b")
                       "" #'(nil :which-key "buffers")
-                      "b" #'(ibuffer :which-key "List")
+                      "b" #'(counsel-ibuffer :which-key "List")
                       "n" #'(leet/new-buffer :which-key "New")
                       "m" #'(leet/kill-other-buffers :which-key "Kill other buffers"))
 
